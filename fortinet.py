@@ -1,4 +1,5 @@
 from paramiko import SSHClient, ssh_exception, client
+from pprint import pprint
 from re import search
 
 # http://docs.paramiko.org/en/stable/api/client.html
@@ -44,5 +45,5 @@ def get_forti_info(ssh_host, ssh_username, ssh_password):
     return result
 
 
-forti_data = get_forti_info("192.168.72.10", "username", "password")
-print(forti_data)
+forti_data = get_forti_info("host", "user", "password")
+pprint(forti_data)
